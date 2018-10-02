@@ -1,0 +1,23 @@
+{
+  "name": "mta-pi",
+  "version": "1.0.0",
+  "description": "nodejs server that retrieves live data from the MTA",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthiasthomas/mta-pi.git"
+  },
+  "author": "Matthias THOMAS LAMOTTE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthiasthomas/mta-pi/issues"
+  },
+  "homepage": "https://github.com/matthiasthomas/mta-pi#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mta-gtfs": "^1.1.0"
+  }
+}

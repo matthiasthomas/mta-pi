@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Stop</th>
+      <th>Direction</th>
+      <th>Arrival</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let train of trains">
+      <td><img src="/assets/{{train.id}}.png" alt=""></td>
+      <td>{{train.stop_name}}</td>
+      <td>{{train.direction}}</td>
+      <td>{{ train.arrival_min | number}}min</td>
+    </tr>
+  </tbody>
+</table>
