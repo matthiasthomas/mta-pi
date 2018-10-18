@@ -11,11 +11,13 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
 
   trains: Train[];
+  status: {};
 
   constructor(private mtaService: MtaService, private router: Router) { }
 
   ngOnInit() {
     this.getTrains();
+    this.getStatus();
 
     setInterval(() => {
       let now = Date.now() / 1000;
@@ -29,6 +31,7 @@ export class MainComponent implements OnInit {
 
     setInterval(() => {
       this.getTrains();
+      this.getStatus();
     }, 30000);
   }
 
@@ -38,4 +41,11 @@ export class MainComponent implements OnInit {
         this.trains = data;
       });
   };
+
+  getStatus = () => {
+    this.mtaService.getStatus()
+      .subscribe((data: JSON) => {
+        this.status = data;
+      })
+  }
 }

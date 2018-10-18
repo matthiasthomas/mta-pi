@@ -15,4 +15,8 @@ export class MtaService {
   getLive() {
     return this.httpClient.get<Train[]>(this.base_url + 'live');
   }
+
+  getStatus() {
+    return this.httpClient.get<JSON>(this.base_url + 'status');
+  }
 }

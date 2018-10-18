@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { MtaService } from './mta.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

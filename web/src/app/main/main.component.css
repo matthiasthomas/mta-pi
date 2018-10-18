@@ -1,1 +1,60 @@
 img { max-width: 50px }
+
+.stop-name {
+    font-size: 1.4em;
+}
+
+.direction {
+    font-size: 1.4em;
+}
+
+.arrival-min {
+    font-size: 1.3em;
+}
+
+.img-train{
+    max-width: 10vw;
+}
+
+.arrival-min {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    vertical-align: middle!important;
+}
+
+/* Small */
+@media  (max-width: 768px) {
+    .stop-name {
+        font-size: .5em;
+    }
+    
+    .direction {
+        font-size: .5em;
+    }
+    
+    .arrival-min {
+        font-size: .4em;
+        text-align: left;
+    }
+}
+
+/* Medium */
+@media  (max-width: 992px) {
+    .stop-name {
+        font-size: 1em;
+    }
+    
+    .direction {
+        font-size: 1em;
+    }
+    
+    .arrival-min {
+        font-size: .9em;
+    }
+}

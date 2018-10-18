@@ -21,18 +21,26 @@ module.exports.middlewares = function (app) {
 }
 
 module.exports.constants = {
-    key: '9f66793aa69d52cd938a1d3659310a7c',
-    stations: [
-        {
-            id: 'G33',
-            feed: 31,
-            direction: 'S',
-            limit: 2
-        }, {
-            id: 'A46',
-            feed: 26,
-            direction: 'S',
-            limit: 2
-        }
-    ]
+    port: 3000,
+    mta: {
+        key: '9f66793aa69d52cd938a1d3659310a7c',
+        stations: [
+            {
+                id: 'G33',
+                feed: 31,
+                direction: 'S',
+                limit: 2
+            }, {
+                id: 'G33',
+                feed: 31,
+                direction: 'N',
+                limit: 2
+            }, {
+                id: 'A46',
+                feed: 26,
+                direction: 'S',
+                limit: 2
+            }
+        ]
+    }
 }
