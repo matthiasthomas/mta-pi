@@ -1,4 +1,5 @@
-const mtafn = require('./mta-functions.js');
+const mtafn = require('./mta-fn.js');
+const weatherfn = require('./weather-fn.js');
 module.exports = (app) => {
 
     app.get('/', async (req, res) => {
@@ -11,5 +12,9 @@ module.exports = (app) => {
 
     app.use('/status', async (req, res) => {
         return res.json(await mtafn.getStatus());
+    });
+
+    app.use('/weather', async (req, res) => {
+        return res.json(await weatherfn.getWeather());
     });
 }

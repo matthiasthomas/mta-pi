@@ -31,16 +31,18 @@ module.exports.constants = {
                 direction: 'S',
                 limit: 2
             }, {
-                id: 'G33',
-                feed: 31,
-                direction: 'N',
-                limit: 2
-            }, {
                 id: 'A46',
                 feed: 26,
                 direction: 'S',
                 limit: 2
             }
         ]
+    },
+    openweather: {
+        url: 'https://api.openweathermap.org/data/2.5',
+        key: '2114b61196571203a83533fe7f2d6bd0',
+        zip_code: '11216',
+        country: 'us',
+        units: 'metric'
     }
 }

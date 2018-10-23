@@ -1,15 +1,16 @@
 img { max-width: 50px }
 
 .stop-name {
-    font-size: 1.4em;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
 .direction {
-    font-size: 1.4em;
+    font-size: 2em;
 }
 
 .arrival-min {
-    font-size: 1.3em;
+    font-size: 2em;
 }
 
 .img-train{
@@ -20,41 +21,63 @@ img { max-width: 50px }
     text-align: right;
 }
 
-table {
-    width: 100%;
+.arrow {
+    font-size: 2em;
 }
 
-td {
+.isRed {
+    color: #ea4141;
+}
+
+table {
+    width: 100%;
+    background-color: transparent;
+    padding: 0%;
+    margin: 0%
+}
+
+.train-row td {
     vertical-align: middle!important;
 }
 
+.temp {
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.temp img {
+    min-width: 2em;
+}
+
 /* Small */
-@media  (max-width: 768px) {
+@media  (max-width: 767px) {
     .stop-name {
-        font-size: .5em;
+        font-size: 1em;
     }
     
     .direction {
-        font-size: .5em;
+        font-size: 1em;
     }
     
     .arrival-min {
-        font-size: .4em;
+        font-size: 1em;
         text-align: left;
     }
 }
 
-/* Medium */
-@media  (max-width: 992px) {
+/* Small */
+@media  (max-width: 991px) {
     .stop-name {
-        font-size: 1em;
+        font-size: 1.5em;
     }
     
     .direction {
-        font-size: 1em;
+        font-size: 1.5em;
     }
     
     .arrival-min {
-        font-size: .9em;
+        font-size: 1.5em;
+        text-align: left;
     }
 }

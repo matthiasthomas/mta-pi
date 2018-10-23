@@ -18,6 +18,7 @@
   "homepage": "https://github.com/matthiasthomas/mta-pi#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "mta-gtfs": "^1.1.0"
+    "mta-gtfs": "^1.1.0",
+    "node-fetch": "^2.2.0"
   }
 }

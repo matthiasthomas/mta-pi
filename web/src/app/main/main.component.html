@@ -1,31 +1,27 @@
-<!-- <div class="row">
-  <div class="col-md-3">Id</div>
-  <div class="col-md-3">Stop</div>
-  <div class="col-md-3">Direction</div>
-  <div class="col-md-3">Arrival</div>
-</div> -->
-
-<!-- <div class="row row-train" *ngFor="let train of trains | sort:'direction'">
-  <div class="col-md-3"><span><img class="img-train" src="/assets/{{ train.id }}.png" alt=""></span></div>
-  <div class="col-md-3"><span class="align-middle">{{ train.stop_name }}</span></div>
-  <div class="col-md-3"><span>{{ (train.direction == 'S') ? 'Downtown/Brooklyn bound' : 'Uptown/Bronx bound' }}</span></div>
-  <div class="col-md-3 arrival-min"><span>{{ train.arrival_min | number }} min</span></div>
-</div> -->
-
 <table class="table table-striped">
   <tbody>
-    <tr *ngFor="let train of trains | sort:'direction'">
+    <tr class="temp-row">
+      <th colspan="2" class="temp">{{weather.temperature.min}}ºC /
+        {{weather.temperature.current}}ºC /
+        {{weather.temperature.max}}ºC</th>
+      <th colspan="2" class="temp">
+        {{weather.description}}
+        <img src="http://api.openweathermap.org/img/w/{{weather.icon}}" alt="weather icon">
+      </th>
+    </tr>
+    <tr class="train-row" *ngFor="let train of trains | sort:'direction'">
       <td><img class="img-train" src="/assets/{{ train.id }}.png" alt=""></td>
       <td class="stop-name">{{ train.stop_name }}</td>
-      <td class="direction">{{ (train.direction == 'S') ? 'Downtown/Brooklyn bound' : 'Uptown/Bronx bound' }}</td>
+      <td class="direction">
+        <i class="fa arrow" [ngClass]="(train.direction == 'S')?'fa-arrow-circle-down':'fa-arrow-circle-up'"></i>
       <td class="arrival-min">{{ train.arrival_min | number }} min</td>
     </tr>
   </tbody>
 </table>
 
-Status:
+<!-- Status:
 <div class="row" *ngFor="let s of status">
   <div class="col-md-6">{{ s.name }}</div>
   <div class="col-md-6">{{ s.status }}</div>
   <div class="col-md-12" innerHtml="{{s.text}}"></div>
-</div>
+</div> -->

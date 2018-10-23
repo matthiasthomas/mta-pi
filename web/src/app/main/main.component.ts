@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Train } from '../train';
 import { MtaService } from '../mta.service';
 import { Router } from '@angular/router';
+import { WeatherService } from '../weather.service';
+import { Weather } from '../weather';
 
 @Component({
   selector: 'app-main',
@@ -12,12 +14,18 @@ export class MainComponent implements OnInit {
 
   trains: Train[];
   status: {};
+  weather: Weather;
 
-  constructor(private mtaService: MtaService, private router: Router) { }
+  constructor(
+    private mtaService: MtaService,
+    private weatherService: WeatherService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.getTrains();
     this.getStatus();
+    this.getWeather();
 
     setInterval(() => {
       let now = Date.now() / 1000;
@@ -34,6 +42,13 @@ export class MainComponent implements OnInit {
       this.getStatus();
     }, 30000);
   }
+
+  getWeather = (): any => {
+    this.weatherService.getWeather()
+      .subscribe((data: Weather) => {
+        this.weather = data;
+      });
+  };
 
   getTrains = () => {
     this.mtaService.getLive()
