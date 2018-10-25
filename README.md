@@ -6,6 +6,10 @@ It also displays the current weather forecast (as defined in the `server/config.
 
 Use it however you wish, fork it, modify it. As for me, I decided to display the webapp on a screen in my living room, so I can see it in the morning.
 
+## Docker
+
+If you want to try it out straight away and have docker installed, you can just run `docker-compose up` at the root of the project and that will start the webapp on port 80 and the rest API on port 3000.
+
 ## Node.JS Server
 
 In order to start the server, just run `node server.js` in the server folder.
