@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: mta-web-app
+    build: ./web
+    ports:
+     - "80:4200"
+  api:
+    container_name: mta-rest-api
+    build: ./server
+    ports:
+     - "3000:3000"

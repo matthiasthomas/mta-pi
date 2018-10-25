@@ -1,19 +1,18 @@
 const weatherfn = {};
 const fetch = require('node-fetch');
 const config = require('./config.js');
-const constants = config.constants;
 
 weatherfn.getWeather = async () => {
     try {
-        const url = constants.openweather.url
+        const url = config.openweather.url
             + '/weather?zip='
-            + constants.openweather.zip_code
+            + config.openweather.zip_code
             + ','
-            + constants.openweather.country
+            + config.openweather.country
             + '&units='
-            + constants.openweather.units
+            + config.openweather.units
             + '&APPID='
-            + constants.openweather.key;
+            + config.openweather.key;
 
         const response = await fetch(url, { method: 'GET' });
         const json = await response.json();

@@ -1,10 +1,9 @@
 const Mta = require('mta-gtfs');
 const mtafn = {};
 const config = require('./config.js');
-const constants = config.constants;
 
 var mta = new Mta({
-    key: constants.mta.key, // only needed for mta.schedule() method
+    key: config.mta.key, // only needed for mta.schedule() method
 });
 
 contains = (a, obj) => {
@@ -77,7 +76,7 @@ mtafn.getSchedule = async (id, feed, direction, limit) => {
 
 mtafn.getAllSchedules = async () => {
     let result = [];
-    for (let station of constants.mta.stations) {
+    for (let station of config.mta.stations) {
         let trains = await mtafn.getSchedule(station.id, station.feed, station.direction, station.limit);
         result = result.concat(trains);
     }
