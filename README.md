@@ -6,6 +6,8 @@ It also displays the current weather forecast (as defined in the `server/config.
 
 Use it however you wish, fork it, modify it. As for me, I decided to display the webapp on a screen in my living room, so I can see it in the morning.
 
+![](screen.png)
+
 ## Docker
 
 If you have docker installed, you can just run `docker-compose up` at the root of the project and that will start the webapp on port 80 and the rest API on port 3000. (You still need to add your .env file with your personal app keys first as explained in the next paragraph)
