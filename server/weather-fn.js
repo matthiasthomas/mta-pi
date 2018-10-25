@@ -17,15 +17,18 @@ weatherfn.getWeather = async () => {
 
         const response = await fetch(url, { method: 'GET' });
         const json = await response.json();
-        const result = {
-            temperature: {
-                current: Math.round(json.main.temp),
-                min: Math.round(json.main.temp_min),
-                max: Math.round(json.main.temp_max)
-            },
-            description: json.weather[0].description,
-            icon: json.weather[0].icon
-        };
+        let result = {};
+        if (json && json.main && json.weather) {
+            result = {
+                temperature: {
+                    current: Math.round(json.main.temp),
+                    min: Math.round(json.main.temp_min),
+                    max: Math.round(json.main.temp_max)
+                },
+                description: json.weather[0].description,
+                icon: json.weather[0].icon
+            };
+        }
         return result;
     } catch (error) {
         console.log(error);
