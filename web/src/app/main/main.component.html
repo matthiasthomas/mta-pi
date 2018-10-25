@@ -9,7 +9,7 @@
         <img src="http://api.openweathermap.org/img/w/{{weather.icon}}" alt="weather icon">
       </th>
     </tr>
-    <tr class="train-row" *ngFor="let train of trains | sort:'direction'">
+    <tr class="train-row" *ngFor="let train of trains | sort:'stop_name'">
       <td><img class="img-train" src="/assets/{{ train.id }}.png" alt=""></td>
       <td class="stop-name">{{ train.stop_name }}</td>
       <td class="direction">

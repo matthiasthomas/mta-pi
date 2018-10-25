@@ -29,7 +29,13 @@ module.exports.constants = {
                 id: 'G33',
                 feed: 31,
                 direction: 'S',
-                limit: 2
+                limit: 1
+            },
+            {
+                id: 'G33',
+                feed: 31,
+                direction: 'N',
+                limit: 1
             }, {
                 id: 'A46',
                 feed: 26,
