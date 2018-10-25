@@ -8,7 +8,7 @@ Use it however you wish, fork it, modify it. As for me, I decided to display the
 
 ## Docker
 
-If you want to try it out straight away and have docker installed, you can just run `docker-compose up` at the root of the project and that will start the webapp on port 80 and the rest API on port 3000.
+If you have docker installed, you can just run `docker-compose up` at the root of the project and that will start the webapp on port 80 and the rest API on port 3000. (You still need to add your .env file with your personal app keys first as explained in the next paragraph)
 
 ## Node.JS Server
 
@@ -16,7 +16,7 @@ In order to start the server, just run `node server.js` in the server folder.
 
 You will need to configure the config.js file. 
 
-The `process.env.MTA_KEY` and `process.env.OPENWEATHER_KEY` that you will see in this file are environment variables that need to be defined in a `.env` file, you just have to create this file in the server folder and add the following lines to it:
+The `process.env.MTA_KEY` and `process.env.OPENWEATHER_KEY` that you will see in this file are environment variables that need to be defined in a `.env` file, you just have to create this file in the `server` folder and add the following lines to it:
 
 `MTA_KEY=yourmtakey`
 `OPENWEATHER_KEY=youropenweatherkey`
